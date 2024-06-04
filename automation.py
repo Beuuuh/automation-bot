@@ -9,7 +9,8 @@ auto.PAUSE = 1
 #start automation
 link = ''
 
-def getInTheSite():
+def getInTheSite(e):
+    link = e
     auto.press('win')
     auto.write('brave')
     auto.press('enter')
@@ -44,3 +45,7 @@ def dataAnalysis():
             auto.press('down')
             auto.press('enter')
         auto.scroll(-30)
+
+def callBoth(x):
+    getInTheSite(x)
+    dataAnalysis()
